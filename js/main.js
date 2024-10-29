@@ -7,41 +7,41 @@
 
 
 
-const name = "Pasha"; 
-console.log("My name is " + name);
+// const name = "Pasha"; 
+// console.log("My name is " + name);
 
 
-const  age = 13; 
-console.log("My age " + age);
+// const  age = 13; 
+// console.log("My age " + age);
 
 
-const isStudent = true;
-console.log("Your are a student ? " + isStudent);
+// const isStudent = true;
+// console.log("Your are a student ? " + isStudent);
 
-const  myString  = "Тільки при втраті всього ми маємо все"; 
-console.log(myString);
+// const  myString  = "Тільки при втраті всього ми маємо все"; 
+// console.log(myString);
 
-const myNumber = 10;
-console.log(myNumber);
+// const myNumber = 10;
+// console.log(myNumber);
 
-const myNull = null;
-console.log(null);
+// const myNull = null;
+// console.log(null);
 
-const userData = prompt("Ім'я та фамілія")
+// const userData = prompt("Ім'я та фамілія")
 
-const inConfirm = confirm('Підтвердження');
-console.log(inConfirm);
-
-
-alert("Увага! Ви збираєтеся виконати небезпечну дію.");
+// const inConfirm = confirm('Підтвердження');
+// console.log(inConfirm);
 
 
-if (confirm("Ви впевнені, що хочете продовжити?")) {
+// alert("Увага! Ви збираєтеся виконати небезпечну дію.");
+
+
+// if (confirm("Ви впевнені, що хочете продовжити?")) {
     
-    alert("Дякую за підтвердження!");
-} else {
-    alert("Дію відмінено!");
-}
+//     alert("Дякую за підтвердження!");
+// } else {
+//     alert("Дію відмінено!");
+// }
 
 
 const x = 5;
