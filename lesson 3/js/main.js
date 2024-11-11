@@ -115,7 +115,7 @@ console.log("Кількість символів у email:", email.length);
 let word1 = 'My';
 let word2 = 'name';
 let word3 = 'is';
-let fullName = `${word1} ${word2} ${word3} Viktor`;
+let fullName = `${word1} ${word2} ${word3} Pasha`;
 
 
 console.log(fullName); 
