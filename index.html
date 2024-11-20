@@ -4,8 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 <body>
+<h2>Hello World</h2>
+
+
+
+    <h1>Перевірка форм</h1>
+
+
+<form id="form1">
+    <label>Поле 1: <input type="text" id="text1"></label><br>
+    <label>Поле 2: <input type="text" id="text2"></label><br>
+    <button type="button" onclick="checkTextFields()">Перевірити поля</button>
+    <p id="output1"></p>
+</form>
+
+
+<form id="form2">
+    <label>Число 1: <input type="number" id="number1"></label><br>
+    <label>Число 2: <input type="number" id="number2"></label><br>
+    <button type="button" onclick="checkSum()">Перевірити суму</button>
+    <p id="output2"></p>
+</form>
+
+
+<form id="form3">
+    <label>Введіть текст: <input type="text" id="text3"></label><br>
+    <button type="button" onclick="checkForJavaScript()">Перевірити текст</button>
+    <p id="output3"></p>
+</form>
+
+<form id="form4">
+    <label>Введіть число: <input type="number" id="rangeNumber"></label><br>
+    <button type="button" onclick="checkRange()">Перевірити діапазон</button>
+    <p id="output4"></p>
+</form>
+
+<form id="form5">
+    <label>Ім'я: <input type="text" id="name"></label><br>
+    <label>Email: <input type="email" id="email"></label><br>
+    <label>Пароль: <input type="password" id="password"></label><br>
+    <button type="button" onclick="validateAndRedirect()">Перевірити дані</button>
+    <p id="output5"></p>
+</form>
+
+
+
+
      <!-- <h2>Hello World</h2> 
       <input type="number" name="" id="num1">
     <br>
@@ -14,6 +61,17 @@
     <button id="calc">calc</button>
     <br>
     <p>Result: <span id="result"></span></p>  -->
+
+    <!-- <label for="">Введіть ваш браузер</label>
+    <input type="text" id="browser">
+    <button type="button" id="checkBrowser">Check</button>
+    <hr>
+    <p id="message"></p> -->
+
+    <!-- <input type="number" id="inputValue">
+    <button onclick="displayResult()">Показати результат</button>
+    <p id="output"></p> -->
+    
     <script src="./js/main.js"></script>
 </body>
 </html>
