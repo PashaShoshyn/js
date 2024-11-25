@@ -106,3 +106,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let tempCelsius = 30;
+let tempFahrenheit = (tempCelsius * 9/5) + 32;
+console.log("Температура в Фаренгейтах:",tempFahrenheit)
+
+

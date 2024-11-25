@@ -1,62 +1,67 @@
 
-function checkTextFields() {
-    const text1 = document.getElementById('text1').value.trim();
-    const text2 = document.getElementById('text2').value.trim();
-    const output1 = document.getElementById('output1');
-    if (text1 && text2) {
-        output1.textContent = "Обидва поля заповнені";
-    } else {
-        output1.textContent = "Не всі поля заповнені";
+
+document.getElementById('drinkSelect').addEventListener('change', function() {
+    const message = `Ви обрали: ${this.value}`;
+    document.getElementById('drinkMessage').textContent = message;
+});
+
+
+function checkDay() {
+    const day = document.getElementById('dayInput').value.toLowerCase();
+    const weekdays = ['понеділок', 'вівторок', 'середа', 'четвер', 'п’ятниця'];
+    const weekends = ['субота', 'неділя'];
+    let message = 'Це не день тижня.';
+    if (weekdays.includes(day)) {
+        message = 'Це робочий день.';
+    } else if (weekends.includes(day)) {
+        message = 'Це вихідний.';
     }
+    document.getElementById('dayMessage').textContent = message;
 }
 
-function checkSum() {
-    const number1 = parseFloat(document.getElementById('number1').value) || 0;
-    const number2 = parseFloat(document.getElementById('number2').value) || 0;
-    const output2 = document.getElementById('output2');
-    if (number1 + number2 > 10) {
-        output2.textContent = "Сума більша за 10";
-    } else {
-        output2.textContent = "Сума менша або дорівнює 10";
+
+function checkSeason() {
+    const month = parseInt(document.getElementById('monthInput').value);
+    let message = 'Неправильний номер місяця.';
+    if (month >= 1 && month <= 12) {
+        if ([12, 1, 2].includes(month)) message = 'Це зима.';
+        else if ([3, 4, 5].includes(month)) message = 'Це весна.';
+        else if ([6, 7, 8].includes(month)) message = 'Це літо.';
+        else if ([9, 10, 11].includes(month)) message = 'Це осінь.';
     }
+    document.getElementById('seasonMessage').textContent = message;
 }
 
-function checkForJavaScript() {
-    const text3 = document.getElementById('text3').value.trim();
-    const output3 = document.getElementById('output3');
-    if (text3.includes("JavaScript")) {
-        output3.textContent = "Текст містить слово JavaScript";
-    } else {
-        output3.textContent = "Текст не містить слово JavaScript";
-    }
+
+function getDaysInMonth() {
+    const month = parseInt(document.getElementById('daysInMonthInput').value);
+    const days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    const message = (month >= 1 && month <= 12) ? 
+        `У цьому місяці ${days[month - 1]} днів.` : 
+        'Неправильний номер місяця.';
+    document.getElementById('daysMessage').textContent = message;
 }
 
-function checkRange() {
-    const rangeNumber = parseFloat(document.getElementById('rangeNumber').value) || 0;
-    const output4 = document.getElementById('output4');
-    if (rangeNumber > 10 && rangeNumber < 20) {
-        output4.textContent = "Число входить в діапазон від 10 до 20";
-    } else {
-        output4.textContent = "Число не входить в діапазон від 10 до 20";
-    }
+
+function trafficLightAction() {
+    const color = document.getElementById('colorInput').value.toLowerCase();
+    let message = 'Невідомий колір.';
+    if (color === 'червоний') message = 'Стоп';
+    else if (color === 'зелений') message = 'Йти';
+    else if (color === 'жовтий') message = 'Чекати';
+    document.getElementById('colorMessage').textContent = message;
 }
 
-function validateAndRedirect() {
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value.trim();
-    const output5 = document.getElementById('output5');
 
-    const isNameValid = name.length >= 3;
-    const isEmailValid = email.includes('@') && email.lastIndexOf('.') > email.indexOf('@');
-    const isPasswordValid = password.length >= 6;
-
-    if (isNameValid && isEmailValid && isPasswordValid) {
-        output5.textContent = "";
-        alert("Дані коректні, перенаправляємо...");
-        window.location.href = "https://example.com";
+function calculate() {
+    const num1 = parseFloat(document.getElementById('num1').value);
+    const num2 = parseFloat(document.getElementById('num2').value);
+    const operation = document.getElementById('operation').value;
+    let result;
+    if (operation === '/' && num2 === 0) {
+        result = 'Ділення на нуль неможливе!';
     } else {
-        output5.textContent = "Помилка: перевірте заповнені дані!";
+        result = eval(`${num1} ${operation} ${num2}`);
     }
+    document.getElementById('calcResult').textContent = `Результат: ${result}`;
 }
-
