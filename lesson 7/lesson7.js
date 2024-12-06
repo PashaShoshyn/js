@@ -70,21 +70,48 @@ console.log(arr)
 
 
 
-let log = ['Mira', 'Pasha', 'Artem', 'Vanya', 'Andrey']
-let surglog = 'Pasha';
-for (let i = 0; log.length; i++) {
-    if (log[i] === surglog) {
-        console.log(`Користувача ${log[i]} знайдено`);
-        break;
-    }
-};
+// let log = ['Mira', 'Pasha', 'Artem', 'Vanya', 'Andrey']
+// let surglog = 'Pasha';
+// for (let i = 0; log.length; i++) {
+//     if (log[i] === surglog) {
+//         console.log(`Користувача ${log[i]} знайдено`);
+//         break;
+//     }
+// };
 
-const numbers = [51, 18, 13, 24, 7, 85, 19];
-let smallestNumber = numbers[0];
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+// let smallestNumber = numbers[0];
 
-for (let i = 0; i < numbers.length; i++){
-    if (numbers[i] < smallestNumber) {
-        smallestNumber = numbers[i];
+// for (let i = 0; i < numbers.length; i++){
+//     if (numbers[i] < smallestNumber) {
+//         smallestNumber = numbers[i];
+//     }
+// }
+// console.log(`Найменше число ${smallestNumber}`);
+
+
+let numbers = [1, 2, 3];
+numbers[1] = 10;
+console.log(numbers); 
+
+
+let numbers = [10, 20, 30, 40, 50];
+for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
+
+
+let text = ["привіт", "день", "радість", "світло", "великий"];
+for (let str of text) {
+    if (str.length > 5) {
+        console.log(str);
     }
 }
-console.log(`Найменше число ${smallestNumber}`);
+
+
+let numbers = [3, 17, 22, 5, 8, 99, 34, 2, 77, 6];
+for (let num of numbers) {
+    if (num % 2 === 0) {
+        console.log(num);
+    }
+}
