@@ -1,25 +1,100 @@
-let message = [1, 2, 3];
-message[1] = 10;
-console.log(message); 
+// function output(name){
+//     console.log(`My name is ${name}`);
+// }
+
+// function output2(name){
+//    return `My name is ${name}`;
+// }
 
 
-let number = [10, 20, 30, 40, 50];
-for (let i = 0; i < number.length; i++) {
-    console.log(number[i]);
+// const add = function(a, b, c){
+//     return a + b + c;
+// }
+
+// console.log(add());
+
+
+
+// output('Vitalii');
+// output('Nazar');
+// output('Pavlo');
+
+// const value = output2('Oleg');
+// console.log(value);
+
+
+
+// const num = function(a, b, c){
+//     let sum = a + b + c
+//     return sum;
+// }
+
+
+
+// function value(arr) {
+//     let suma = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//       suma += arr[i];
+      
+//     }
+//     return suma / arr.length;
+//   }
+  
+//   let num2 = [1, 2, 3, 4, 10];
+//   console.log(value(num2));
+
+//   function everage_value(arr) {
+//     let suma = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//       suma += arr[i];
+      
+//     }
+//     return suma / arr.length;
+//   }
+  
+//   let arr2 = [1, 2, 3, 4, 10];
+//   console.log(everage_value(arr2));
+
+
+
+
+
+
+
+
+
+
+
+
+const friends = ['Mango', 'Poly', 'Kiwi', 'Ajax'];
+let string = ''; 
+
+for (let i = 0; i < friends.length; i++) {
+  string += friends[i];
+  if (i !== friends.length - 1) {
+    string += ',';
+  }
 }
 
+console.log(string);
 
-let text = ["привіт", "день", "радість", "світло", "великий"];
-for (let str of text) {
-    if (str.length > 5) {
-        console.log(str);
-    }
-}
+const end = ['Mango', 'Poly', 'Kiwi', 'Ajax'];
+const str = end.join(',');
+
+console.log(str);
 
 
-let numbers = [3, 17, 22, 5, 8, 99, 34, 2, 77, 6];
-for (let num of numbers) {
-    if (num % 2 === 0) {
-        console.log(num);
-    }
-}
+
+
+const cards = [
+    'Карточка-1',
+    'Карточка-2',
+    'Карточка-3',
+    'Карточка-4',
+    'Карточка-5',
+  ];
+  
+  const indexToDelete = 2; 
+  cards.splice(indexToDelete, 1);
+  
+  console.log(cards);
