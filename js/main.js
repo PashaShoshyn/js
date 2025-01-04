@@ -18,7 +18,9 @@ console.log(str);
 
 
 
-const cards = [
+
+
+  const cards = [
     'Карточка-1',
     'Карточка-2',
     'Карточка-3',
@@ -26,10 +28,27 @@ const cards = [
     'Карточка-5',
   ];
   
-  const indexToDelete = 2; 
-  cards.splice(indexToDelete, 1);
+  const indexToDelete = 2;  
+  const indexToUpdate = 3; 
+  const cardToAdd = 'Карточка-6';  
+  
+  for (let i = 0; i < cards.length; i++) {
+
+    if (i === indexToDelete) {
+      cards.splice(i, 1);  
+      console.log(`Видалено: ${cards[i]}`);
+      i--; 
+    }
+  
+
+    if (i === indexToUpdate) {
+      cards[i] = 'Оновлена карточка';  
+      console.log(`Оновлено: ${cards[i]}`);
+    }
+  }
+  
+
+  cards.push(cardToAdd);
+  console.log(`Додано нову карточку: ${cardToAdd}`);
   
   console.log(cards);
-
-
-
