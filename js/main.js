@@ -15,11 +15,6 @@ const str = end.join(',');
 
 console.log(str);
 
-
-
-
-
-
   const cards = [
     'Карточка-1',
     'Карточка-2',
