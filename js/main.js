@@ -1,49 +1,116 @@
+
+// function voterResults(voters) {
+//   return voters.reduce((acc, voter) => {
+//       if (voter.age >= 18 && voter.age <= 25) {
+//           acc.numYoungPeople++;
+//           if (voter.voted) acc.numYoungVotes++;
+//       } else if (voter.age >= 26 && voter.age <= 35) {
+//           acc.numMidsPeople++;
+//           if (voter.voted) acc.numMidVotesPeople++;
+//       } else if (voter.age >= 36 && voter.age <= 55) {
+//           acc.numOldsPeople++;
+//           if (voter.voted) acc.numOldVotesPeople++;
+//       }
+//       return acc;
+//   }, {
+//       numYoungVotes: 0,
+//       numYoungPeople: 0,
+//       numMidVotesPeople: 0,
+//       numMidsPeople: 0,
+//       numOldVotesPeople: 0,
+//       numOldsPeople: 0
+//   });
+// }
+
+
+// const voters = [
+//   {name:'Bob' , age: 30, voted: true},
+//   {name:'Jake' , age: 32, voted: true},
+//   {name:'Kate' , age: 25, voted: false},
+//   {name:'Sam' , age: 20, voted: false},
+//   {name:'Phil' , age: 21, voted: true},
+//   {name:'Ed' , age:55, voted:true},
+//   {name:'Tami' , age: 54, voted:true},
+//   {name: 'Mary', age: 31, voted: false},
+//   {name: 'Becky', age: 43, voted: false},
+//   {name: 'Joey', age: 41, voted: true},
+//   {name: 'Jeff', age: 30, voted: true},
+//   {name: 'Zack', age: 19, voted: false}
+// ];
+
+// console.log(voterResults(voters));
+
+
+// let age = 1;
+
+// while (age <= 18){
+//     console.log(`Age ${age}`);
+//     age++;
+// }
+
+
+// let clientCounter = 18;
+// const maxClients = 25;
+
+// while (clientCounter < maxClients) {
+//     console.log(clientCounter);
+//     clientCounter += 1;
+// }
+
+// do {
+//     console.log('Age ${age}');
+//     age++;
+// } while (age <= 18);
+
+// for(let i = 0; i <= 18; i++){
+//     console.log('Age ${i}');
+// }
+
 const friends = ['Mango', 'Poly', 'Kiwi', 'Ajax'];
-let string = ''; 
+let string = '';
 
 for (let i = 0; i < friends.length; i++) {
-  string += friends[i];
-  if (i !== friends.length - 1) {
-    string += ',';
-  }
+    string += friends[i];
+    if (i !== friends.length - 1) {
+        string += ','; 
+    }
 }
 
-console.log(string);
+console.log(string); 
 
-const end = ['Mango', 'Poly', 'Kiwi', 'Ajax'];
-const str = end.join(',');
 
-console.log(str);
 
-  const cards = [
+const fr = ['Mango', 'Poly', 'Kiwi', 'Ajax'];
+
+const str = fr.join(','); 
+console.log(str); 
+
+
+
+const cards = [
     'Карточка-1',
     'Карточка-2',
     'Карточка-3',
     'Карточка-4',
     'Карточка-5',
-  ];
-  
-  const indexToDelete = 2;  
-  const indexToUpdate = 3; 
-  const cardToAdd = 'Карточка-6';  
-  
-  for (let i = 0; i < cards.length; i++) {
+];
 
-    if (i === indexToDelete) {
-      cards.splice(i, 1);  
-      console.log(`Видалено: ${cards[i]}`);
-      i--; 
-    }
-  
 
-    if (i === indexToUpdate) {
-      cards[i] = 'Оновлена карточка';  
-      console.log(`Оновлено: ${cards[i]}`);
-    }
-  }
-  
+const cardToRemove = 'Карточка-3';
+const indexToRemove = cards.indexOf(cardToRemove);
+if (indexToRemove !== -1) {
+    cards.splice(indexToRemove, 1); 
+}
+console.log(cards); 
 
-  cards.push(cardToAdd);
-  console.log(`Додано нову карточку: ${cardToAdd}`);
-  
-  console.log(cards);
+
+const cardToInsert = 'Карточка-6';
+cards.push(cardToInsert); 
+console.log(cards); 
+
+const cardToUpdate = 'Карточка-4';
+const indexToUpdate = cards.indexOf(cardToUpdate);
+if (indexToUpdate !== -1) {
+    cards[indexToUpdate] = 'Карточка-4.1'; 
+}
+console.log(cards); 
