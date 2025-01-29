@@ -1,10 +1,10 @@
-// 1. Виведення 'Hello World!' при кліку на кнопку
+// 1
 const button1 = document.createElement('button');
 button1.textContent = 'Натисни мене';
 document.body.appendChild(button1);
 button1.addEventListener('click', () => alert('Hello World!'));
 
-// 2. Вгадування випадкового числа
+// 2
 const randomNumber = Math.floor(Math.random() * 100) + 1;
 const checkGuess = () => {
     const userGuess = parseInt(document.getElementById('guessField').value);
@@ -18,21 +18,21 @@ const checkGuess = () => {
     }
 };
 
-// 3. Лічильник кліків по сторінці
+// 3. 
 let clickCount = 0;
 document.addEventListener('click', () => {
     clickCount++;
     console.log(`Кількість кліків: ${clickCount}`);
 });
 
-// 4. Функція, що застосовує колбек до кожного елемента масиву
+// 4. 
 const applyCallbackToEachElement = (arr, callback) => arr.map(callback);
 const arr = [1, 2, 3, 4, 5];
 const squareCallback = num => num * num;
 const result = applyCallbackToEachElement(arr, squareCallback);
 console.log(result);
 
-// 5. Розрахунок дисконтної ціни
+// 5.
 const calculateDiscountedPrice = (price, discount, callback) => {
     const discountedPrice = price - (price * discount / 100);
     callback(discountedPrice);
@@ -40,7 +40,7 @@ const calculateDiscountedPrice = (price, discount, callback) => {
 const showDiscountedPrice = price => console.log(`Знижена ціна: ${price} грн`);
 calculateDiscountedPrice(100, 10, showDiscountedPrice);
 
-// 6. Об'єкт bankAccount
+// 6.
 const bankAccount = {
     ownerName: 'John Doe',
     accountNumber: '123456789',
@@ -59,7 +59,7 @@ const bankAccount = {
     }
 };
 
-// 7. Об'єкт weather
+// 7.
 const weather = {
     temperature: 0,
     humidity: 50,
@@ -73,7 +73,7 @@ const checkWeather = () => {
     alert(weather.isFreezing() ? 'Температура нижче 0 градусів Цельсія' : 'Температура вище або рівна 0 градусів Цельсія');
 };
 
-// 8. Об'єкт user
+// 8
 const user = {
     name: '',
     email: '',
@@ -85,7 +85,7 @@ const user = {
     }
 };
 
-// 9. Об'єкт movie
+// 9
 const movie = {
     title: 'Inception',
     director: 'Christopher Nolan',
