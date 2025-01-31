@@ -107,3 +107,8 @@ const user = {
   console.log("Баланс:", account.getBalance());
   console.log("Історія транзакцій:", account.getTransactionHistory());
   
+
+
+
+ 
+
