@@ -6,7 +6,84 @@
     <title>Document</title>
 
 </head>
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зміна кольору, введення імені, валідація та розмір тексту</title>
+    <style>
+        #validation-input {
+            border: 3px solid #bdbdbd;
+        }
+        #validation-input.valid {
+            border-color: #4caf50;
+        }
+        #validation-input.invalid {
+            border-color: #f44336;
+        }
+    </style>
+</head>
 <body>
+    <form>
+        <p>Choose a color:</p>
+        <label>
+            <input type="radio" name="color" value="red" checked> Red
+        </label>
+        <label>
+            <input type="radio" name="color" value="white"> White
+        </label>
+        <label>
+            <input type="radio" name="color" value="green"> Green
+        </label>
+    </form>
+    
+    <input type="text" placeholder="Ваше ім'я?" id="name-input">
+    <h1>Привіт, <span id="name-output">незнайомець</span>!</h1>
+    
+    <input type="text" id="validation-input" data-length="6" placeholder="Введи 6 символів">
+    
+    <input id="font-size-control" type="range" min="10" max="100" value="16">
+    <br>
+    <span id="text" style="font-size: 16px;">Абракадабра!</span>
+    
+    <script>
+        // 1. Зміна кольору фону
+        document.querySelectorAll('input[name="color"]').forEach(input => {
+            input.addEventListener('change', (event) => {
+                document.body.style.backgroundColor = event.target.value;
+            });
+        });
+
+        // 2. Введення імені
+        document.getElementById('name-input').addEventListener('input', (event) => {
+            const output = document.getElementById('name-output');
+            output.textContent = event.target.value.trim() || 'незнайомець';
+        });
+
+        // 3. Валідація введеного тексту
+        document.getElementById('validation-input').addEventListener('blur', (event) => {
+            const input = event.target;
+            const requiredLength = Number(input.dataset.length);
+            if (input.value.length === requiredLength) {
+                input.classList.add('valid');
+                input.classList.remove('invalid');
+            } else {
+                input.classList.add('invalid');
+                input.classList.remove('valid');
+            }
+        });
+
+        // 4. Зміна розміру тексту
+        document.getElementById('font-size-control').addEventListener('input', (event) => {
+            document.getElementById('text').style.fontSize = event.target.value + 'px';
+        });
+    </script>
+</body>
+</html>
+
+<!-- <body>
     <h3>Переміщення елемента</h3>
 <div id="box" style="width: 200px; height: 200px; background: lightgray;"></div>
 
@@ -15,7 +92,7 @@
     <p>Натисни клавішу: <span id="key" style="font-weight: bold;"></span></p>
     <p id="message"></p>
     <button onclick="startNewGame()">Нова гра</button>
-</div>
+</div> -->
 
 
 <!-- 
